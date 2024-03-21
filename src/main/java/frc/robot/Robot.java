@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.AddressableLEDBuffer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.subsystems.LEDSubsystem;
+import frc.robot.subsystems.LedSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -21,8 +21,6 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
-  AddressableLED ledStrip = new AddressableLED(0);
-  AddressableLEDBuffer ledBuffer = new AddressableLEDBuffer(160);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -33,9 +31,6 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
-    ledStrip.setLength(ledBuffer.getLength());
-    ledStrip.setData(ledBuffer);
-    ledStrip.start();
   }
 
   /**

@@ -7,11 +7,11 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class LEDSubsystem extends SubsystemBase {
+public class LedSubsystem extends SubsystemBase {
 
   public static Spark m_blinkin = new Spark(0);
   /** Creates a new LedSubsystem. */
-  public LEDSubsystem() {}
+  public LedSubsystem() {}
 
   public void setColor(double pwmValue) {
     m_blinkin.set(pwmValue);

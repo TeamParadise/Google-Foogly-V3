@@ -23,7 +23,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import frc.robot.subsystems.LEDSubsystem;
+import frc.robot.subsystems.LedSubsystem;
 
 
 
@@ -39,7 +39,7 @@ public class RobotContainer {
   public final static DriveSubsystem drive = new DriveSubsystem();
   public final static ArmSubsystem arm = new ArmSubsystem();
   public final static IntakeSubsystem intake = new IntakeSubsystem();
-  public static LEDSubsystem m_led = new LEDSubsystem();
+  public static LedSubsystem m_led = new LedSubsystem();
 
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
@@ -71,8 +71,8 @@ public class RobotContainer {
     m_driverController.leftBumper().whileTrue(new RunIntake());
     m_driverController.rightBumper().whileTrue(new RunScore());
     m_driverController.a().onTrue(new zeroArmEncoder());
-    m_driverController.b().onTrue(new SetColor(0.85)); //Left Trigger
-    m_driverController.x().onTrue(new SetColor(0.62)); //Right Trigger
+    m_driverController.b().onTrue(new SetColor(0.91)); //Left Trigger
+    m_driverController.x().onTrue(new SetColor(0.61)); //Right Trigger
   }
 
   /**
