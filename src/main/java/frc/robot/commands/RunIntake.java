@@ -21,6 +21,7 @@ public class RunIntake extends Command {
   @Override
   public void execute() {
     RobotContainer.intake.runIntake(0.5);
+    System.out.println("intaking");
   }
 
   // Called once the command ends or is interrupted.
