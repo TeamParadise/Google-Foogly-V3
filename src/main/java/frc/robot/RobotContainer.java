@@ -63,7 +63,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    drive.setDefaultCommand(new ArcadeDrive());
+    // drive.setDefaultCommand(new ArcadeDrive());
     arm.setDefaultCommand(new IdleArm());
 
     m_driverController.rightTrigger(0.1).whileTrue(new MoveArm(1));
@@ -71,8 +71,9 @@ public class RobotContainer {
     m_driverController.leftBumper().whileTrue(new RunIntake());
     m_driverController.rightBumper().whileTrue(new RunScore());
     m_driverController.a().onTrue(new zeroArmEncoder());
-    m_driverController.b().onTrue(new SetColor(0.91)); //Left Trigger
-    m_driverController.x().onTrue(new SetColor(0.61)); //Right Trigger
+    m_driverController.pov(270).onTrue(new RunIntake());
+    m_driverController.pov(90).onTrue(new RunScore());
+  
   }
 
   /**

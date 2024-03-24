@@ -9,8 +9,9 @@ import edu.wpi.first.wpilibj.AddressableLEDBuffer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.commands.ArcadeDrive;
 import frc.robot.subsystems.LedSubsystem;
-
+import frc.robot.RobotContainer;
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
  * each mode, as described in the TimedRobot documentation. If you change the name of this class or
@@ -84,7 +85,11 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-1 ;
+    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-1;
+    RobotContainer.drive.arcadeDrive(moveSpeed, rotateSpeed);
+  }
 
   @Override
   public void testInit() {
@@ -94,7 +99,11 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during test mode. */
   @Override
-  public void testPeriodic() {}
+  public void testPeriodic() {
+    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-.6  ;
+    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.5;
+    RobotContainer.drive.arcadeDrive(moveSpeed, rotateSpeed);
+  }
 
   /** This function is called once when the robot is first started up. */
   @Override
