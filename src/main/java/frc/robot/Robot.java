@@ -86,7 +86,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-.85 ;
+    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-.65 ;
     double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.6;
     RobotContainer.drive.arcadeDrive(moveSpeed, rotateSpeed);
   }
@@ -100,8 +100,8 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during test mode. */
   @Override
   public void testPeriodic() {
-    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-.6  ;
-    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.5;
+    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-.3  ;
+    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.3;
     RobotContainer.drive.arcadeDrive(moveSpeed, rotateSpeed);
   }
 
