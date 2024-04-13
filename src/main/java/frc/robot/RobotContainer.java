@@ -24,6 +24,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.subsystems.LedSubsystem;
+import frc.robot.commands.wave;;
 
 
 
@@ -63,14 +64,18 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    drive.setDefaultCommand(new ArcadeDrive());
+    // drive.setDefaultCommand(new ArcadeDrive());
     arm.setDefaultCommand(new IdleArm());
 
     m_driverController.rightTrigger(0.1).whileTrue(new MoveArm(1));
     m_driverController.leftTrigger(0.1).whileTrue(new MoveArm(-1));
-    m_driverController.leftBumper().whileTrue(new RunIntake());
-    m_driverController.rightBumper().whileTrue(new RunScore());
+    // m_driverController.leftBumper().whileTrue(new RunIntake());
+    // m_driverController.rightBumper().whileTrue(new RunScore());
+    // m_driverController.a().onTrue(new zeroArmEncoder());
+    // m_driverController.b().onTrue(new SetColor(0.91)); //Left Trigger
+    // m_driverController.x().onTrue(new SetColor(0.61)); //Right Trigger
   }
+  
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

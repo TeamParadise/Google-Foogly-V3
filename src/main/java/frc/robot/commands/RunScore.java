@@ -21,6 +21,7 @@ public class RunScore extends Command {
   @Override
   public void execute() {
     RobotContainer.intake.runIntake(-0.5);
+    System.out.println("outaking");
   }
 
   // Called once the command ends or is interrupted.
