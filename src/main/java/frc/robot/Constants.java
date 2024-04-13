@@ -19,6 +19,6 @@ public final class Constants {
 
   public static class ArmConstants {
     public static final double kEncoderToAngleRadians = (Math.PI/2)/36.5;
-    public static final double kG = 0.02;
+    public static final double kG = 0.04;
   }
 }

@@ -22,8 +22,8 @@ public class ArcadeDrive extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-1.5;
-    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.85;
+    double moveSpeed = RobotContainer.m_driverController.getLeftY()*-1;
+    double rotateSpeed = RobotContainer.m_driverController.getRightX()*-.8;
     RobotContainer.drive.arcadeDrive(moveSpeed, rotateSpeed);
   }
 

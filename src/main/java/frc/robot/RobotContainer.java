@@ -70,9 +70,6 @@ public class RobotContainer {
     m_driverController.leftTrigger(0.1).whileTrue(new MoveArm(-1));
     m_driverController.leftBumper().whileTrue(new RunIntake());
     m_driverController.rightBumper().whileTrue(new RunScore());
-    m_driverController.a().onTrue(new zeroArmEncoder());
-    m_driverController.b().onTrue(new SetColor(0.91)); //Left Trigger
-    m_driverController.x().onTrue(new SetColor(0.61)); //Right Trigger
   }
 
   /**
